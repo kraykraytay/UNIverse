@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="homePage.css">
+        <title>UNIverse - study room for uni students</title>
+    </head>
+
+    <body>
+        
+        <div id='nav'>
+            <img src="logo.png" id="logo"  />
+        
+         <nav>   
+           <ul class="nav">
+              <li><a href="file:///Users/taehc/Desktop/UNIverse/homePage.html#">HOME</a></li>
+              <li><a href="file:///Users/taehc/Desktop/UNIverse/Login_v1/signup.html#">REGISTER</a></li>
+              <li><a href="file:///Users/taehc/Desktop/UNIverse/Login_v1/login.html#">LOGIN</a></li>
+              <li><a href="#">INSTAGRAM </a></li>
+              <li><a href="#">CONTACT US</a></li>
+           </ul>
+        </nav>
+          <div class="clear"></div>
+          </div>
+
+        <section>
+            <div class="content">
+                <h1> Welcome to <strong><span style="color:#ED8074">UNI</span></strong>VERSE!</h1>
+                <h3> linkedin for students<h3>
+                <btn-group>
+                    <a href="file:///Users/taehc/Desktop/UNIverse/Login_v1/signup.html#">REGISTER</a>
+                    <a href="file:///Users/taehc/Desktop/UNIverse/Login_v1/login.html#">LOGIN</a>
+                </btn-group> 
+            </div>
+
+            <!-- Slideshow container -->
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="studygroupslide.png" style="width: 180%">
+           </div>
+  
+           <div class="mySlides fade">
+              <img src="networkslide.png" style="width:180%">
+           </div>
+  
+           <div class="mySlides fade">
+              <img src="notesslide.png" style="width:180%">
+           </div>
+
+           <!-- The dots/circles -->
+           <div style="text-align:right">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+           </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+          
+        </section>
+    </body>
+    
+       
+</html>

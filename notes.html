@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="notes.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> Search engine for notes </title>
+    </head>
+    <body>
+        <div id='nav'>
+            <img src="logo.png" id="logo"  />
+        
+         <nav>   
+           <ul class="nav">
+              <li><a href="file:///Users/taehc/Desktop/UNIverse/profile.html#" class="notification">
+                <span>PROFILE</span>
+                <span class="badge">3</span></a></li>
+                <li><a href="file:///Users/taehc/Desktop/UNIverse/notes.html#">NOTES</a></li>
+                <li><a href="file:///Users/taehc/Desktop/UNIverse/studygroup.html#">STUDY GROUP</a></li>
+                <li><a href="file:///Users/taehc/Desktop/UNIverse/networking.html#">NETWORKING</a></li>
+                <li><a href="file:///Users/taehc/Desktop/UNIverse/homePage.html#">SIGN OUT</a></li>
+           </ul>
+        </nav>
+          <div class="clear"></div>
+          </div>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for notes">
+        <button class="btn2"><a href="file:///Users/taehc/Desktop/UNIverse/upload.html">or Upload Notes</a></button>
+
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:25%;">TITLE</th>
+            <th style="width:25%;">TOPIC</th>
+            <th style="width:25%;">COURSE</th>
+            <th style="width:25%;">DOWNLOAD</th>
+          </tr>
+          <tr>
+            <td>binary search</td>
+            <td>algorithms</td>
+            <td>computer science</td>
+            <td>
+                <!-- Full width -->
+                <button class="btn" style="width:100%"><a href="https://web2.qatar.cmu.edu/~mhhammou/15122-s16/lectures/06-binsearch.pdf"><i class="fa fa-download"></i>Download</a></button>
+            </td>
+          </tr>
+          <tr>
+            <td>stacks</td>
+            <td>algorithms</td>
+            <td>computer science</td>
+            <td>
+                <!-- Full width -->
+                <button class="btn" style="width:100%"><a href="https://www.cs.cmu.edu/~wlovas/15122-r11/lectures/10-stacks.pdf"><i class="fa fa-download"></i>Download</a></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Hamlet</td>
+            <td>shakespeare</td>
+            <td>english</td>
+            <td>
+                <!-- Full width --><button class="btn" style="width:100%"><a href="#"></a><i class="fa fa-download"></i>Download</button>
+            </td>
+          </tr>
+          <tr>
+            <td>fractions</td>
+            <td>numbers</td>
+            <td>maths</td>
+            <td>
+                <!-- Full width -->
+                <button class="btn" style="width:100%"><a href="#"></a><i class="fa fa-download"></i>Download</button>
+            </td>
+          </tr>
+        </table>
+
+        <script>
+            function myFunction() {
+              // Declare variables 
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+            
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                } 
+              }
+            }
+            </script>
+        
+
+    </body>
+</html>
